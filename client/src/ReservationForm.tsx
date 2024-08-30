@@ -1,6 +1,4 @@
-// import React from "react"
 import { Form, Input, DatePicker, Select, Button, message } from "antd"
-// import moment from "moment"
 import { useMutation } from "@apollo/client"
 import { ADDAPPOINTMENT } from "../apollo/mutations"
 import { validatePhone } from "./utils/util"

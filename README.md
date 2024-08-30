@@ -28,3 +28,7 @@ Open another terminal window, run: yarn start
 
 1. add redis in docker,Complete API data caching
 2. Separate webpack files and add typescript to nodes
+
+# contact me
+
+If you encounter any problems, please contact me: shuaizihao0608@outlook.com

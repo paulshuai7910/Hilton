@@ -1,90 +1,79 @@
 import React from "react"
-import { Space, Table, Tag } from "antd"
+import { Table } from "antd"
 import type { TableProps } from "antd"
+import { AppointmentProps } from "../utils/type"
+import { timestampToDateStr } from "../utils/util"
+import DetailModal from "./DetailModal"
+import StatusModal from "./StatusModal"
 
-interface DataType {
-  key: string
-  name: string
-  age: number
-  address: string
-  tags: string[]
+const AppointList: React.FC<{
+  data: Array<AppointmentProps>
+}> = ({ data }) => {
+  const [dataSource, setDataSource] = React.useState(data)
+  const columns: TableProps<AppointmentProps>["columns"] = [
+    {
+      title: "姓名",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "联系方式",
+      dataIndex: "phone",
+      key: "phone",
+    },
+    {
+      title: "到达时间",
+      dataIndex: "appointmentTime",
+      key: "appointmentTime",
+      defaultSortOrder: "descend",
+      sorter: (a, b) =>
+        parseFloat(a.appointmentTime) - parseFloat(b.appointmentTime),
+      render: (timestamp) => <>{timestampToDateStr(parseFloat(timestamp))}</>,
+    },
+    {
+      title: "餐桌大小",
+      dataIndex: "tableSize",
+      key: "tableSize",
+      render: (size) => <>{size === "1" ? "单人桌" : size + "人桌"}</>,
+    },
+    {
+      title: "预定状态",
+      key: "status",
+      filters: [
+        {
+          text: "预定成功",
+          value: "success",
+        },
+        {
+          text: "已取消",
+          value: "cancel",
+        },
+        {
+          text: "已完成",
+          value: "complete",
+        },
+      ],
+      onFilter: (value, record) => record.status.indexOf(value as string) === 0,
+      render: (_, record) => (
+        <StatusModal
+          dataSource={dataSource}
+          setDataSource={setDataSource}
+          btnTitle="修改状态"
+          detail={record}
+        />
+      ),
+    },
+    {
+      title: "详情",
+      dataIndex: "detail",
+      key: "detail",
+      render: (_, record) => (
+        <DetailModal btnTitle="查看详情" detail={record} />
+      ),
+    },
+  ]
+
+  return <Table columns={columns} dataSource={dataSource} />
 }
-
-const columns: TableProps<DataType>["columns"] = [
-  {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-    render: (text) => <a>{text}</a>,
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-    key: "age",
-  },
-  {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
-  },
-  {
-    title: "Tags",
-    key: "tags",
-    dataIndex: "tags",
-    render: (_, { tags }) => (
-      <>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? "geekblue" : "green"
-          if (tag === "loser") {
-            color = "volcano"
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          )
-        })}
-      </>
-    ),
-  },
-  {
-    title: "Action",
-    key: "action",
-    render: (_, record) => (
-      <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
-]
-
-const data: DataType[] = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-    tags: ["nice", "developer"],
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-    tags: ["loser"],
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sydney No. 1 Lake Park",
-    tags: ["cool", "teacher"],
-  },
-]
-
-const AppointList: React.FC = () => (
-  <Table columns={columns} dataSource={data} />
-)
 
 export default AppointList

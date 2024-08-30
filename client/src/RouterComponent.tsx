@@ -7,7 +7,7 @@ import MyAppointment from "./MyAppointment"
 
 const RouterComponent = () => {
   const loginData = localStorage.getItem("loginData")
-
+  let loginType = loginData ? JSON.parse(loginData).loginType : ""
   return (
     <Router>
       <Routes>
@@ -15,9 +15,13 @@ const RouterComponent = () => {
           path="/"
           element={loginData ? <LayoutComponent /> : <LoginLayout />}
         >
-          <Route index element={<ReservationForm />} />
-          <Route path="/my-appointment" element={<MyAppointment />} />
-          <Route path="/staff" element={<StaffManage />} />
+          {loginType === "customer" && (
+            <Route index element={<ReservationForm />} />
+          )}
+          {loginType === "customer" && (
+            <Route path="/my-appointment" element={<MyAppointment />} />
+          )}
+          {loginType === "staff" && <Route index element={<StaffManage />} />}
         </Route>
       </Routes>
     </Router>

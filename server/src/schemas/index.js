@@ -1,23 +1,18 @@
 import { gql } from "apollo-server"
 
 const typeDefs = gql`
-  type Locations {
-    id: String
-    name: String
-    description: String
-    photo: String
-  }
   type Appointment {
-    id: String
+    _key: String
     name: String
     phone: String
-    appointmentTime: String!
+    appointmentTime: String
     tableSize: String
     status: String
   }
 
   type Query {
-    locations: Locations
+    getMyAppointments(name: String): [Appointment]
+    getAllAppointments: [Appointment]
   }
 
   type Mutation {
@@ -27,6 +22,15 @@ const typeDefs = gql`
       tableSize: String
       appointmentTime: String!
     ): Appointment
+    updateAppointment(
+      _key: String!
+      name: String
+      phone: String
+      tableSize: String
+      appointmentTime: String
+      status: String
+    ): Appointment
+    deleteAppointment(_key: String!): Appointment
   }
 `
 

@@ -10,8 +10,8 @@ const { Header, Sider, Content } = Layout
 
 const getItems = () => {
   let loginData = localStorage.getItem("loginData")
-  let type = loginData ? JSON.parse(loginData).loginType : ""
-  if (type === "customer") {
+  let loginType = loginData ? JSON.parse(loginData).loginType : ""
+  if (loginType === "customer") {
     return [
       {
         key: "/",

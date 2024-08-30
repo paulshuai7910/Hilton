@@ -10,11 +10,8 @@ const LoginForm: React.FC = () => {
 
   const onFinish = (values: { name: string; phone: string }) => {
     console.log("Received values of form:", values)
-    let loginData = {
-      ...values,
-      loginType: "customer",
-    }
-    localStorage.setItem("loginData", JSON.stringify(loginData))
+
+    localStorage.setItem("loginData", JSON.stringify(values))
     window.location.reload()
   }
 
@@ -22,7 +19,7 @@ const LoginForm: React.FC = () => {
     console.log("Failed:", errorInfo)
   }
   const handleStaffLogin = (type: string) => {
-    form.setFieldValue("type", type)
+    form.setFieldValue("loginType", type)
     form.submit()
   }
   return (
@@ -36,15 +33,15 @@ const LoginForm: React.FC = () => {
       style={{}}
     >
       <Form.Item
-        label="user name"
+        label="用户名"
         name="name"
         rules={[{ required: true, message: "please enter user name!" }]}
       >
         <Input />
       </Form.Item>
-      <Form.Item name="type" className="form_type"></Form.Item>
+      <Form.Item name="loginType" className="form_type"></Form.Item>
       <Form.Item
-        label="phone number"
+        label="手机号"
         name="phone"
         rules={[
           { required: true, message: "please enter phone number!" },
