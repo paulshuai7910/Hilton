@@ -1,0 +1,12 @@
+.ant-layout-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .layout_form{
+    width: 500px;
+    .from_btns{
+      display: flex;
+      justify-content: center;
+    }
+  }

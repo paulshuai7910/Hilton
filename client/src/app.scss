@@ -1,0 +1,10 @@
+$body-color: rgb(33, 37, 41);
+
+body {
+  color: $body-color;
+  margin: 0;
+  .layout_root {
+    height:100vh;
+    
+  }
+}
