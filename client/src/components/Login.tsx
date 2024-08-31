@@ -5,12 +5,10 @@ import { Layout, theme } from "antd"
 
 const { Header, Content } = Layout
 
-const LoginForm: React.FC = () => {
+export const LoginForm: React.FC = () => {
   const [form] = Form.useForm()
 
   const onFinish = (values: { name: string; phone: string }) => {
-    console.log("Received values of form:", values)
-
     localStorage.setItem("loginData", JSON.stringify(values))
     window.location.reload()
   }
@@ -79,7 +77,7 @@ const LoginForm: React.FC = () => {
     </Form>
   )
 }
-const LoginLayout: React.FC = () => {
+export const LoginLayout: React.FC = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
@@ -116,5 +114,3 @@ const LoginLayout: React.FC = () => {
     </Layout>
   )
 }
-
-export default LoginLayout

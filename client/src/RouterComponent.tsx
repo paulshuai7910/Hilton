@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import LayoutComponent from "./LayoutComponent"
-import LoginLayout from "./components/Login"
+import { LoginLayout } from "./components/Login"
 import ReservationForm from "./ReservationForm"
 import StaffManage from "./StaffManage"
 import MyAppointment from "./MyAppointment"
