@@ -20,18 +20,11 @@ const DetailModal: React.FC<{ btnTitle: string; detail: AppointmentProps }> = ({
   const handleCancel = () => {
     setIsModalOpen(false)
   }
-  const handleChangeInfo = () => {
-    setIsModalOpen(false)
-  }
-
   return (
     <>
       <Space size="middle">
         <Button type="primary" size="small" onClick={showModal}>
           {btnTitle}
-        </Button>
-        <Button onClick={handleChangeInfo} type="default">
-          修改信息
         </Button>
       </Space>
 

@@ -5,6 +5,7 @@ import { AppointmentProps } from "../utils/type"
 import { timestampToDateStr } from "../utils/util"
 import DetailModal from "./DetailModal"
 import StatusModal from "./StatusModal"
+import ChangeModal from "./ChangeModal"
 
 const AppointList: React.FC<{
   data: Array<AppointmentProps>
@@ -31,7 +32,7 @@ const AppointList: React.FC<{
       render: (timestamp) => <>{timestampToDateStr(parseFloat(timestamp))}</>,
     },
     {
-      title: "餐桌大小",
+      title: "餐桌标准",
       dataIndex: "tableSize",
       key: "tableSize",
       render: (size) => <>{size === "1" ? "单人桌" : size + "人桌"}</>,
@@ -69,6 +70,19 @@ const AppointList: React.FC<{
       key: "detail",
       render: (_, record) => (
         <DetailModal btnTitle="查看详情" detail={record} />
+      ),
+    },
+    {
+      title: "修改",
+      dataIndex: "change",
+      key: "change",
+      render: (_, record) => (
+        <ChangeModal
+          btnTitle="修改信息"
+          dataSource={dataSource}
+          setDataSource={setDataSource}
+          detail={record}
+        />
       ),
     },
   ]

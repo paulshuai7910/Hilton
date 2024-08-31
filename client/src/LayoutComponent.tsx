@@ -60,7 +60,13 @@ const LayoutComponent: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <Header
+          style={{
+            padding: 0,
+            background: colorBgContainer,
+            justifyContent: "space-between",
+          }}
+        >
           <Button
             type="text"
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -74,16 +80,15 @@ const LayoutComponent: React.FC = () => {
           <h3>Welcome to Hilton Dining Reservation System</h3>
           <Button
             type="default"
+            size="small"
             onClick={() => {
               localStorage.removeItem("loginData")
               navigate("/")
               window.location.reload()
             }}
+            danger
             style={{
-              fontSize: "16px",
-              width: 64,
-              height: 34,
-              float: "right",
+              fontSize: "12px",
               marginRight: 16,
             }}
           >

@@ -22,7 +22,6 @@ const ReservationForm = () => {
   return (
     <Form
       name="reservation_form"
-      initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
@@ -39,7 +38,7 @@ const ReservationForm = () => {
       </Form.Item>
 
       <Form.Item
-        label="phone number"
+        label="手机号码"
         name="phone"
         rules={[{ validator: validatePhone }]}
       >
@@ -47,7 +46,7 @@ const ReservationForm = () => {
       </Form.Item>
 
       <Form.Item
-        label="预计到达时间"
+        label="到达时间"
         name="appointmentTime"
         rules={[{ required: true, message: "请选择预计到达时间！" }]}
       >
@@ -55,10 +54,10 @@ const ReservationForm = () => {
       </Form.Item>
 
       <Form.Item
-        label="预定桌位大小"
+        label="桌位标准"
         name="tableSize"
         rules={[
-          { required: true, message: "请选择预定桌位大小（即用餐人数）！" },
+          { required: true, message: "请选择预定桌位标准（即用餐人数）！" },
         ]}
       >
         <Select placeholder="请选择">
