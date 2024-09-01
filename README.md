@@ -1,25 +1,44 @@
 # Appointment Management System Demo
 
+## Overview
+
 A fullstack demo used Apollo, Graphql, ArangoDb, nodejs, webpack, typescript, react, antd, sass, jest and docker etc.
 
-# Require
+## Require
 
 1. docker desktop
 2. node >= 18.12.0
 
-# Quick Start
+## Quick Start
 
-## Installation
+### Installation
 
 Open the terminal in the project file directory,And gradually run the following commands:
 
-1. `docker-compose pull`
-2. `docker run -e ARANGO_ROOT_PASSWORD=hilton -p 8529:8529 -d arangodb:3.10`
-   (If you have installed Docker desktop software, you can see that the arangodb container is already running after opening it)
-3. `yarn initdb` (we can see:Database appointment_Database created successfully.
-   Collection order_collection created successfully.)
+#### docker
+
+First:
+
+`docker-compose pull`
+
+second:
+
+`docker run -e ARANGO_ROOT_PASSWORD=hilton -p 8529:8529 -d arangodb:3.10`
+
+(If you have installed Docker desktop software, you can see that the arangodb container is already running after opening it)
+
+#### npm
+
+first:
 
 `npm install`
+
+Second:
+
+`yarn initdb`
+
+(we can see:Database appointment_Database created successfully.
+Collection order_collection created successfully.)
 
 ## run project
 
@@ -39,12 +58,13 @@ or
 
 # test
 
-Unit testing of code
+### Unit testing of code
 
 `npm run test`
 or
 `yarn test`
-Get code for unit testing results
+
+# Get unit test coverage
 
 `npm run test:coverage`
 or
@@ -52,9 +72,10 @@ or
 
 # todo
 
-1. add redis in docker,Complete API data caching
-2. Separate webpack files and add typescript to nodes
-   ...
+1. adding lerna to this project: managing and publishing multiple JavaScript/TypeScript packages from this repository.
+2. add redis in docker: Complete API data caching
+3. Separate webpack files and add typescript to nodes
+4. ...
 
 # contact me
 
