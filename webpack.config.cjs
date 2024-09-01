@@ -2,17 +2,6 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin")
 
-// import { HtmlWebpackPlugin } from "html-webpack-plugin"
-
-// import pkg from "html-webpack-plugin"
-// const { HtmlWebpackPlugin } = pkg
-// import path from "path"
-// import { WebpackManifestPlugin } from "webpack-manifest-plugin"
-
-// import path from "path"
-// import HtmlWebpackPlugin from "html-webpack-plugin"
-// import WebpackManifestPlugin from "webpack-manifest-plugin"
-
 module.exports = {
   entry: {
     index: "./client/src/index.tsx",

@@ -1,6 +1,11 @@
 # Appointment Management System Demo
 
-A fullstack demo used Apollo, Graphql, ArangoDb, nodejs, webpack, typescript, react, antd, sass and docker etc.
+A fullstack demo used Apollo, Graphql, ArangoDb, nodejs, webpack, typescript, react, antd, sass, jest and docker etc.
+
+# Require
+
+1. docker desktop
+2. node >= 18.12.0
 
 # Quick Start
 
@@ -21,12 +26,29 @@ Open the terminal in the project file directory,And gradually run the following 
 ### First run server
 
 Open a terminal window, run:
+`npm run server`
+or
 `yarn server`
 
 ### Second run client
 
 Open another terminal window, run:
+`npm run start`
+or
 `yarn start`
+
+# test
+
+Unit testing of code
+
+`npm run test`
+or
+`yarn test`
+Get code for unit testing results
+
+`npm run test:coverage`
+or
+`yarn test:coverage`
 
 # todo
 
