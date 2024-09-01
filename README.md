@@ -2,7 +2,38 @@
 
 ## Overview
 
-A fullstack demo used Apollo, Graphql, ArangoDb, nodejs, webpack, typescript, react, antd, sass, jest and docker etc.
+This is a full-stack technology architecture project built with the Apollo framework. The front-end uses the react framework as the core to write components, webpack for packaging, hot updates, typescript for type verification, and jest for unit testing.
+
+In the back-end, apollo-server is the core, and the arango database is added, deleted, modified, and checked through the graphql query language. Arangodb runs in docker, and the database is initialized using the node script to create a database named appointment_Database. At the same time, a new collection order_collection is created.
+
+I don’t have enough time to implement the core of the demo login. I implemented the addition and editing of the scheduled information of the data in the code. Of course, I also regard the deletion operation as a kind of editing. After all, what we need is to mark the deletion, not the real delete.
+
+In addition, I will temporarily put the changes I want to make later under todo
+
+## Technology Stack
+
+- Frontend
+
+  - React
+  - Typescript
+  - Antd
+  - Sass
+  - Jest
+  - Apollo-react
+
+- Backend
+
+  - Apollo-server
+  - Nodejs
+  - Graphql
+
+- other
+  - Webpack
+  - Babel
+  - ArangoDb
+  - Docker
+  - Git
+  - ...
 
 ## Require
 
@@ -37,7 +68,7 @@ Second:
 
 `yarn initdb`
 
-(we can see:Database appointment_Database created successfully.
+(Out put: Database appointment_Database created successfully.
 Collection order_collection created successfully.)
 
 ## run project
