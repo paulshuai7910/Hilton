@@ -101,12 +101,13 @@ or
 or
 `yarn test:coverage`
 
-# todo
+# Todo
 
-1. adding lerna to this project: managing and publishing multiple JavaScript/TypeScript packages from this repository.
-2. add redis in docker: Complete API data caching
-3. Separate webpack files and add typescript to nodes
-4. ...
+- adding lerna to this project: managing and publishing multiple JavaScript/TypeScript packages from this repository.
+- adding data-loader for graphql: Solving the n+1 problem of associated queries
+- add redis in docker: Complete API data caching
+- Separate webpack files and add typescript to nodes
+- ...
 
 # contact me
 
