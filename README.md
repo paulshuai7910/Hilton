@@ -101,6 +101,12 @@ or
 or
 `yarn test:coverage`
 
+# why did I do?
+
+- why graphql: GraphQL has good support for a variety of NoSQL databases
+- structure: As a full-stack project structure, the amount of front-end and back-end code will be very large, so the back-end code needs to be separated from the structure.
+- Apollo: Apollo provides unified technical support on the front-end and back-end
+
 # Todo
 
 - adding lerna to this project: managing and publishing multiple JavaScript/TypeScript packages from this repository.
