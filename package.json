@@ -7,7 +7,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "server": "node --inspect server/server.js",
+    "server": "node server/server.js",
+    "server:isp": "node --inspect server/server.js",
     "server:debug": "nodemon  --inspect-brk=9229 -r debug server/server.js",
     "server:ts": "npx ts-node server/app.ts",
     "start": "webpack server --open",

@@ -80,6 +80,8 @@ Open a terminal window, run:
 or
 `yarn server`
 
+For developer, If you want to inspect server code, I suggest you use the " yarn server:debug " command. which will monitor your serverdiamagnetic in real time.
+
 ### Second run client
 
 Open another terminal window, run:
