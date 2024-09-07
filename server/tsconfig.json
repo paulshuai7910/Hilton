@@ -8,11 +8,12 @@
       "allowJs": true,
       "checkJs": false,
       "outDir": "../dist",
-      "rootDir": "src",
+      "rootDir": "../server",
       "strict": true,
       "noImplicitAny": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
+      "moduleResolution" : "node",
       "forceConsistentCasingInFileNames": true,
       "baseUrl": ".",
       "paths": {
@@ -21,8 +22,12 @@
         ]
       }
     },
+    "ts-node": {
+      "esm": true
+    },
     "include": [
-      "src/"
+      "src/",
+      "app.ts"
     ],
     "exclude": [
       "node_modules",
