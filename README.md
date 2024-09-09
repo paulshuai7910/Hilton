@@ -12,28 +12,9 @@ In addition, I will temporarily put the changes I want to make later under todo
 
 ## Technology Stack
 
-- Frontend
-
-  - React
-  - Typescript
-  - Antd
-  - Sass
-  - Jest
-  - Apollo-react
-
-- Backend
-
-  - Apollo-server
-  - Nodejs
-  - Graphql
-
-- other
-  - Webpack
-  - Babel
-  - ArangoDb
-  - Docker
-  - Git
-  - ...
+| Frontend                                                                                               | Backend                                                        | other                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| <ul><li>React</li><li>Typescript</li><li>Antd</li><li>Sass</li><li>Jest</li><li>Apollo-react</li></ul> | <ul><li>Apollo-server</li><li>Nodejs</li><li>Graphql</li></ul> | <ul><li>Webpack</li><li>Babel</li><li>ArangoDb</li><li>Docker</li><li>Git</li><li>...</li></ul> |
 
 ## Require
 
@@ -119,4 +100,8 @@ or
 
 # contact me
 
-If you encounter any problems, please contact me: **shuaizihao0608@outlook.com**
+If you encounter any problems, please contact me: <a href="mailto:shuaizihao0608@outlook.com">shuaizihao0608@outlook.com</a>
+
+# About me
+
+个人博客网站 [About Me](https://blog.zhshuai.top/about/)。
