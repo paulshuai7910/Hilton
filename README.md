@@ -104,4 +104,4 @@ If you encounter any problems, please contact me: <a href="mailto:shuaizihao0608
 
 # About me
 
-个人博客网站 [About Me](https://blog.zhshuai.top/about/)。
+My Blog website [About Me](https://blog.zhshuai.top/about/)。
